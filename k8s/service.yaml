@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-service
+  labels:
+    app: payment-service
+spec:
+  type: NodePort
+  selector:
+    app: payment-service
+  ports:
+  - port: 80
+    targetPort: 8006
+    nodePort: 30006
+    protocol: TCP
+    name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-db
+  labels:
+    app: payment-db
+spec:
+  type: ClusterIP
+  selector:
+    app: payment-db
+  ports:
+  - port: 5432
+    targetPort: 5432
+    protocol: TCP
+    name: postgres
