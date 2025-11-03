@@ -28,6 +28,21 @@ spec:
             configMapKeyRef:
               name: payment-config
               key: LOG_LEVEL
+        - name: ORDER_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: payment-config
+              key: ORDER_SERVICE_URL
+        - name: INVENTORY_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: payment-config
+              key: INVENTORY_SERVICE_URL
+        - name: NOTIFICATION_SERVICE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: payment-config
+              key: NOTIFICATION_SERVICE_URL
         resources:
           limits:
             cpu: "200m"

@@ -1,0 +1,8 @@
+{
+  "order_id": 3001,
+  "user_id": 601,
+  "amount": 2499.99,
+  "currency": "INR",
+  "payment_method": "CREDIT_CARD",
+  "reference": "INV-2025-001234"
+}
