@@ -10,10 +10,13 @@ CREATE TABLE IF NOT EXISTS payments (
     payment_method VARCHAR(20) NOT NULL,
     status VARCHAR(20) DEFAULT 'PENDING',
     transaction_id VARCHAR(50) UNIQUE,
+    reference VARCHAR(100),
+    authorization_code VARCHAR(50),
     gateway_response VARCHAR(500),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    completed_at TIMESTAMP
+    completed_at TIMESTAMP,
+    captured_at TIMESTAMP
 );
 
 -- Create transactions table

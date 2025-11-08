@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: payment-config
-data:
-  LOG_LEVEL: "INFO"
-  ORDER_SERVICE_URL: "http://order-service"
-  INVENTORY_SERVICE_URL: "http://inventory-service"
-  NOTIFICATION_SERVICE_URL: "http://notification-service"
