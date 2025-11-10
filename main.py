@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException, Query, Header, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
+from prometheus_fastapi_instrumentator import Instrumentator
 from pydantic import BaseModel, Field, validator
 from typing import Optional, List
 from datetime import datetime, timedelta
@@ -180,6 +181,9 @@ app = FastAPI(
     description="Handles payment processing, transactions, and refunds for ECI platform",
     version="1.0.0"
 )
+
+# Add Prometheus instrumentation
+Instrumentator().instrument(app).expose(app)
 
 # CORS Middleware
 app.add_middleware(
