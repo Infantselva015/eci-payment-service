@@ -1,10 +1,6 @@
 # Payment Service - Assignment Submission
 
 ## BITS Pilani - WILP Program
-**Course**: Scalable Services  
-**Assignment**: Microservices Architecture Implementation  
-**Submission Date**: November 10, 2025  
-**Group**: [Your Group Number]
 
 ---
 
@@ -286,9 +282,6 @@ See `sample_requests/` directory for complete examples.
 See `db/init_with_seed.sql` for schema and sample data.
 
 ---
-
-**End of Document**
-
-**Submitted By**: [Student Name(s)]  
-**Date**: November 10, 2025  
+  
 **Repository**: https://github.com/Infantselva015/eci-payment-service
+**End of Document**
